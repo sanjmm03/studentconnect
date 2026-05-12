@@ -1,0 +1,83 @@
+.stats-container {
+  min-height: 100vh;
+  background-color: var(--bg-secondary);
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.stats-header { margin-bottom: 2rem; }
+.stats-header h1 { font-size: 1.7rem; color: var(--text-primary); margin: 0.5rem 0 0.3rem; font-weight: 700; }
+.stats-header p { color: var(--text-muted); font-size: 0.9rem; }
+
+.btn-volver {
+  background: none; border: none; color: var(--accent);
+  font-size: 0.9rem; cursor: pointer;
+  font-family: "Inter", sans-serif; padding: 0; font-weight: 500;
+}
+.btn-volver:hover { text-decoration: underline; }
+
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 1rem; margin-bottom: 2rem;
+}
+
+.stats-card {
+  border-radius: 12px; padding: 1.5rem;
+  display: flex; flex-direction: column;
+  align-items: center; gap: 0.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.stats-card.azul {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: white;
+}
+.stats-card.verde {
+  background: linear-gradient(135deg, #065f46, #059669);
+  color: white;
+}
+.stats-card.amarillo {
+  background: linear-gradient(135deg, #92400e, #d97706);
+  color: white;
+}
+.stats-card.naranja {
+  background: linear-gradient(135deg, #991b1b, #dc2626);
+  color: white;
+}
+
+.stats-card-numero { font-size: 2.5rem; font-weight: 800; line-height: 1; }
+.stats-card-label { font-size: 0.82rem; opacity: 0.85; text-align: center; }
+
+.stats-graficas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 1.5rem;
+}
+
+.grafica-card {
+  background: var(--bg-card); border-radius: 12px;
+  padding: 1.5rem; box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+}
+
+.grafica-card h2 {
+  color: var(--text-primary); font-size: 0.95rem;
+  font-weight: 600; margin-bottom: 1.2rem;
+  padding-bottom: 0.8rem; border-bottom: 1px solid var(--border-color);
+}
+
+.grafica-full { grid-column: 1 / -1; }
+
+.stats-vacio {
+  background: var(--bg-card); border-radius: 12px; padding: 3rem;
+  text-align: center; color: var(--text-muted);
+  box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);
+}
+
+@media (max-width: 600px) {
+  .stats-container { padding: 1rem; }
+  .stats-graficas { grid-template-columns: 1fr; }
+  .stats-cards { grid-template-columns: repeat(2, 1fr); }
+}

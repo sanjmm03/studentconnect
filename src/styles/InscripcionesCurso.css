@@ -1,0 +1,126 @@
+.ic-container {
+  min-height: 100vh;
+  background-color: var(--bg-secondary);
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ic-header { margin-bottom: 1.5rem; }
+.ic-header h1 { font-size: 1.7rem; color: var(--text-primary); margin: 0.5rem 0 0.2rem; font-weight: 700; }
+.ic-header p { color: var(--text-muted); font-size: 0.9rem; }
+.ic-materia { color: var(--accent); font-weight: 600; }
+
+.btn-volver {
+  background: none; border: none; color: var(--accent);
+  font-size: 0.9rem; cursor: pointer;
+  font-family: "Inter", sans-serif; padding: 0;
+  font-weight: 500; margin-bottom: 0.5rem; display: block;
+}
+.btn-volver:hover { text-decoration: underline; }
+
+.ic-error {
+  background-color: var(--error-bg); color: var(--error-text);
+  border: 1px solid var(--error-border);
+  padding: 0.8rem 1rem; border-radius: 8px; margin-bottom: 1rem; font-size: 0.88rem;
+}
+
+.ic-stats {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1rem; margin-bottom: 1.5rem;
+}
+
+.ic-stat-card {
+  background: var(--bg-card); border-radius: 12px; padding: 1.2rem;
+  text-align: center; box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  display: flex; flex-direction: column; gap: 0.3rem;
+}
+.ic-stat-card.confirmada { border-top: 3px solid var(--success-text); }
+.ic-stat-card.pendiente { border-top: 3px solid var(--warning-text); }
+.ic-stat-numero { font-size: 2rem; font-weight: 700; color: var(--text-primary); }
+.ic-stat-label { font-size: 0.82rem; color: var(--text-muted); }
+
+.ic-filtros {
+  display: flex; gap: 1rem; margin-bottom: 1.5rem;
+  flex-wrap: wrap; align-items: center;
+}
+
+.filtros { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.ic-select-horario {
+  padding: 0.5rem 1rem; border: 1.5px solid var(--border-color);
+  border-radius: 8px; font-family: "Inter", sans-serif;
+  font-size: 0.88rem; background: var(--bg-input);
+  color: var(--text-primary); cursor: pointer;
+  transition: border-color 0.2s;
+}
+.ic-select-horario:focus { outline: none; border-color: var(--border-focus); }
+
+.ic-lista { display: flex; flex-direction: column; gap: 0.8rem; }
+
+.ic-card {
+  background: var(--bg-card); border-radius: 12px;
+  padding: 1.2rem 1.5rem; box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color); transition: box-shadow 0.2s;
+}
+.ic-card:hover { box-shadow: var(--shadow); }
+
+.ic-card-info { margin-bottom: 0.8rem; }
+
+.ic-alumno-row {
+  display: flex; align-items: center;
+  gap: 1rem; flex-wrap: wrap; margin-bottom: 0.8rem;
+}
+
+.ic-avatar {
+  width: 42px; height: 42px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+  color: white; display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; font-weight: 700; flex-shrink: 0;
+}
+
+.ic-alumno-row h3 { color: var(--text-primary); font-size: 0.95rem; font-weight: 600; flex: 1; }
+.ic-fecha { color: var(--text-muted); font-size: 0.78rem; }
+
+.ic-horarios { margin-top: 0.5rem; }
+.ic-horarios-titulo { color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; font-weight: 500; }
+.ic-horarios-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+.ic-horario-chip {
+  background-color: var(--tag-bg); color: var(--tag-text);
+  padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.78rem; font-weight: 500;
+  border: 1px solid var(--border-color);
+}
+
+.ic-acciones { display: flex; gap: 0.8rem; margin-top: 1rem; flex-wrap: wrap; }
+
+.btn-confirmar {
+  background-color: var(--success-bg); color: var(--success-text);
+  border: 1px solid var(--success-border); padding: 0.5rem 1rem;
+  border-radius: 8px; cursor: pointer;
+  font-family: "Inter", sans-serif; font-size: 0.88rem;
+  transition: all 0.2s; font-weight: 500;
+}
+.btn-confirmar:hover { background-color: var(--success-text); color: white; border-color: var(--success-text); }
+
+.btn-rechazar {
+  background-color: var(--error-bg); color: var(--error-text);
+  border: 1px solid var(--error-border); padding: 0.5rem 1rem;
+  border-radius: 8px; cursor: pointer;
+  font-family: "Inter", sans-serif; font-size: 0.88rem;
+  transition: all 0.2s; font-weight: 500;
+}
+.btn-rechazar:hover { background-color: var(--error-text); color: white; border-color: var(--error-text); }
+
+.ic-vacio {
+  background: var(--bg-card); border-radius: 12px; padding: 3rem;
+  text-align: center; color: var(--text-muted);
+  box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);
+}
+
+@media (max-width: 600px) {
+  .ic-container { padding: 1rem; }
+  .ic-stats { grid-template-columns: 1fr; }
+  .ic-alumno-row { flex-direction: column; align-items: flex-start; }
+}

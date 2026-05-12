@@ -1,0 +1,140 @@
+.pp-container {
+  min-height: 100vh;
+  background-color: var(--bg-secondary);
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.pp-loading {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 3rem;
+  font-size: 0.95rem;
+}
+
+.btn-volver {
+  background: none; border: none; color: var(--accent);
+  font-size: 0.9rem; cursor: pointer;
+  font-family: "Inter", sans-serif; padding: 0;
+  font-weight: 500; margin-bottom: 1.5rem; display: block;
+}
+.btn-volver:hover { text-decoration: underline; }
+
+.pp-header-card {
+  background: var(--bg-card); border-radius: 16px;
+  padding: 2rem; box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 1.5rem; flex-wrap: wrap;
+}
+
+.pp-avatar-grande img {
+  width: 90px; height: 90px; border-radius: 50%; object-fit: cover;
+  border: 3px solid var(--border-color);
+}
+
+.pp-avatar-placeholder {
+  width: 90px; height: 90px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+  color: white; display: flex; align-items: center;
+  justify-content: center; font-size: 2.2rem; font-weight: 700;
+}
+
+.pp-info { flex: 1; min-width: 200px; }
+
+.pp-info h1 { font-size: 1.5rem; color: var(--text-primary); font-weight: 700; margin-bottom: 0.3rem; }
+.pp-rol { color: var(--text-muted); font-size: 0.88rem; margin-bottom: 0.6rem; }
+
+.pp-promedio {
+  display: flex; align-items: center; gap: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+.pp-promedio span { color: var(--text-secondary); font-size: 0.85rem; }
+
+.estrellas-mini { display: flex; gap: 0.1rem; }
+.estrella-mini { font-size: 1rem; color: var(--border-color); }
+.estrella-mini.activa { color: #f59e0b; }
+
+.pp-bio {
+  color: var(--text-secondary); font-size: 0.9rem;
+  line-height: 1.6; margin-bottom: 0.8rem;
+}
+
+.pp-materias { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+.pp-materia-tag {
+  background-color: var(--tag-bg); color: var(--tag-text);
+  padding: 0.2rem 0.7rem; border-radius: 6px;
+  font-size: 0.75rem; font-weight: 600;
+}
+
+.pp-btn-chat { white-space: nowrap; align-self: flex-start; }
+
+.pp-section {
+  background: var(--bg-card); border-radius: 12px;
+  padding: 1.5rem; box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color); margin-bottom: 1.5rem;
+}
+
+.pp-section h2 {
+  color: var(--text-primary); font-size: 1rem; font-weight: 600;
+  margin-bottom: 1.2rem; padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.pp-cursos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.pp-curso-card {
+  border: 1.5px solid var(--border-color); border-radius: 10px;
+  padding: 1rem; cursor: pointer; transition: all 0.2s;
+  background: var(--bg-secondary);
+}
+.pp-curso-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.pp-curso-card h3 { color: var(--text-primary); font-size: 0.92rem; font-weight: 600; margin: 0.4rem 0 0.3rem; }
+.pp-curso-card p { color: var(--text-muted); font-size: 0.8rem; line-height: 1.4; }
+
+.pp-vacio {
+  color: var(--text-muted); font-size: 0.88rem;
+  text-align: center; padding: 1.5rem;
+  border: 1.5px dashed var(--border-color); border-radius: 8px;
+}
+
+.pp-resenas { display: flex; flex-direction: column; gap: 0.8rem; }
+
+.pp-resena-card {
+  border: 1px solid var(--border-color); border-radius: 10px;
+  padding: 1rem; background: var(--bg-secondary);
+}
+
+.pp-resena-header {
+  display: flex; align-items: center; gap: 0.8rem;
+  margin-bottom: 0.5rem; flex-wrap: wrap;
+}
+
+.pp-resena-avatar {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+  color: white; display: flex; align-items: center;
+  justify-content: center; font-size: 0.85rem; font-weight: 700; flex-shrink: 0;
+}
+
+.pp-resena-header strong { color: var(--text-primary); font-size: 0.88rem; }
+.pp-resena-fecha { color: var(--text-muted); font-size: 0.76rem; margin-top: 0.1rem; }
+
+.pp-resena-comentario {
+  color: var(--text-secondary); font-size: 0.86rem; font-style: italic;
+  line-height: 1.5; padding-left: 0.8rem;
+  border-left: 2px solid var(--accent);
+}
+
+@media (max-width: 600px) {
+  .pp-container { padding: 1rem; }
+  .pp-header-card { flex-direction: column; align-items: center; text-align: center; }
+  .pp-materias { justify-content: center; }
+  .pp-cursos-grid { grid-template-columns: 1fr; }
+}

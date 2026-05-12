@@ -1,0 +1,156 @@
+.bc-container {
+  min-height: 100vh;
+  background-color: var(--bg-secondary);
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.bc-header { margin-bottom: 1.5rem; }
+.bc-header h1 { font-size: 1.7rem; color: var(--text-primary); margin: 0.5rem 0 0.3rem; font-weight: 700; }
+.bc-header p { color: var(--text-muted); font-size: 0.9rem; }
+
+.btn-volver {
+  background: none; border: none; color: var(--accent);
+  font-size: 0.9rem; cursor: pointer;
+  font-family: "Inter", sans-serif; padding: 0; font-weight: 500;
+}
+.btn-volver:hover { text-decoration: underline; }
+
+.bc-exito {
+  background-color: var(--success-bg); color: var(--success-text);
+  border: 1px solid var(--success-border);
+  padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem; font-size: 0.9rem;
+}
+
+.bc-error {
+  background-color: var(--error-bg); color: var(--error-text);
+  border: 1px solid var(--error-border);
+  padding: 0.8rem 1rem; border-radius: 8px; margin-bottom: 1rem; font-size: 0.88rem;
+}
+
+.bc-input {
+  width: 100%; padding: 0.85rem 1.2rem;
+  border: 1.5px solid var(--border-color); border-radius: 10px;
+  font-size: 0.95rem; font-family: "Inter", sans-serif;
+  background-color: var(--bg-card); color: var(--text-primary);
+  margin-bottom: 1rem; box-shadow: var(--shadow-sm);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.bc-input:focus {
+  outline: none; border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.1);
+}
+.bc-input::placeholder { color: var(--text-placeholder); }
+
+.bc-filtros { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
+
+.bc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem; margin-bottom: 2rem;
+}
+
+.bc-card {
+  background: var(--bg-card); border-radius: 12px;
+  padding: 1.2rem; box-shadow: var(--shadow-sm);
+  border: 1.5px solid var(--border-color);
+  cursor: pointer; transition: all 0.2s;
+}
+.bc-card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: var(--shadow); }
+.bc-card.seleccionado { border-color: var(--accent); background-color: var(--accent-light); }
+.bc-card.inscrito { opacity: 0.6; cursor: default; }
+.bc-card.inscrito:hover { transform: none; border-color: var(--border-color); box-shadow: var(--shadow-sm); }
+
+.bc-card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem; }
+
+.bc-materia-tag {
+  background-color: var(--tag-bg); color: var(--tag-text);
+  padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 600;
+}
+
+.bc-inscrito-badge {
+  background-color: var(--success-bg); color: var(--success-text);
+  border: 1px solid var(--success-border);
+  padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 600;
+}
+
+.bc-card h3 { color: var(--text-primary); font-size: 0.95rem; font-weight: 600; margin-bottom: 0.4rem; }
+
+.bc-descripcion {
+  color: var(--text-muted); font-size: 0.82rem; margin-bottom: 0.8rem;
+  display: -webkit-box; -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical; overflow: hidden; line-height: 1.5;
+}
+
+.bc-asesor-row { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.5rem; }
+
+.bc-asesor-avatar {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+  color: white; display: flex; align-items: center; justify-content: center;
+  font-size: 0.75rem; font-weight: 700; flex-shrink: 0;
+}
+
+.bc-asesor-nombre { color: var(--text-primary); font-size: 0.82rem; font-weight: 600; }
+.bc-promedio { color: #f59e0b; font-size: 0.78rem; font-weight: 600; }
+.bc-horarios-count { color: var(--text-muted); font-size: 0.78rem; }
+
+.bc-panel {
+  background: var(--bg-card); border-radius: 12px;
+  padding: 1.5rem; box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+}
+
+.bc-panel h2 { color: var(--text-primary); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; }
+.bc-panel-desc { color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 1rem; line-height: 1.5; }
+.bc-panel-subtitulo { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.8rem; font-weight: 500; }
+
+.bc-horarios-grid { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 1.5rem; }
+
+.bc-horario-opcion {
+  display: flex; flex-direction: column; align-items: center;
+  padding: 0.8rem 1.2rem; border: 1.5px solid var(--border-color);
+  border-radius: 10px; cursor: pointer; transition: all 0.2s; min-width: 130px;
+  background: var(--bg-input);
+}
+.bc-horario-opcion:hover { border-color: var(--accent); background-color: var(--accent-light); }
+.bc-horario-opcion.seleccionado { border-color: var(--accent); background-color: var(--accent); color: white; }
+.bc-horario-opcion.lleno { opacity: 0.45; cursor: not-allowed; }
+.bc-horario-opcion.lleno:hover { border-color: var(--border-color); background: var(--bg-input); }
+
+.horario-dia { font-weight: 600; font-size: 0.88rem; color: var(--text-primary); }
+.bc-horario-opcion.seleccionado .horario-dia { color: white; }
+.horario-tiempo { font-size: 0.82rem; margin-top: 0.2rem; color: var(--text-secondary); }
+.bc-horario-opcion.seleccionado .horario-tiempo { color: rgba(255,255,255,0.85); }
+.horario-cupo { font-size: 0.72rem; margin-top: 0.2rem; color: var(--text-muted); }
+.bc-horario-opcion.seleccionado .horario-cupo { color: rgba(255,255,255,0.7); }
+
+.btn-inscribirse { width: 100%; padding: 0.9rem; font-size: 0.95rem; }
+
+.bc-vacio {
+  background: var(--bg-card); border-radius: 12px; padding: 3rem;
+  text-align: center; color: var(--text-muted);
+  box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 600px) {
+  .bc-container { padding: 1rem; }
+  .bc-grid { grid-template-columns: 1fr; }
+}
+
+.asesor-link {
+  cursor: pointer;
+  color: var(--accent);
+  font-weight: 600;
+}
+.asesor-link:hover { text-decoration: underline; }
+
+.asesor-link {
+  cursor: pointer;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.82rem;
+}
+.asesor-link:hover { text-decoration: underline; }

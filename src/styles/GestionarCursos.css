@@ -1,0 +1,168 @@
+.gc-container {
+  min-height: 100vh;
+  background-color: var(--bg-secondary);
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.gc-header { margin-bottom: 1.5rem; }
+
+.gc-header-top {
+  display: flex; justify-content: space-between;
+  align-items: center; margin-top: 0.5rem; flex-wrap: wrap; gap: 1rem;
+}
+
+.gc-header h1 { font-size: 1.7rem; color: var(--text-primary); margin-bottom: 0.3rem; font-weight: 700; }
+.gc-header p { color: var(--text-muted); font-size: 0.9rem; }
+
+.btn-volver {
+  background: none; border: none; color: var(--accent);
+  font-size: 0.9rem; cursor: pointer;
+  font-family: "Inter", sans-serif; padding: 0; font-weight: 500;
+}
+.btn-volver:hover { text-decoration: underline; }
+
+.gc-error {
+  background-color: var(--error-bg); color: var(--error-text);
+  border: 1px solid var(--error-border);
+  padding: 0.8rem 1rem; border-radius: 8px; margin-bottom: 1rem; font-size: 0.88rem;
+}
+
+.gc-form-card {
+  background: var(--bg-card); border-radius: 12px;
+  padding: 1.5rem; box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color); margin-bottom: 1.5rem;
+}
+
+.gc-form-card h2 { color: var(--text-primary); font-size: 1rem; margin-bottom: 1rem; font-weight: 600; }
+.gc-form { display: flex; flex-direction: column; gap: 1rem; }
+.form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+.gc-lista { display: flex; flex-direction: column; gap: 1rem; }
+
+.gc-card {
+  background: var(--bg-card); border-radius: 12px;
+  padding: 1.5rem; box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.2s;
+}
+.gc-card:hover { box-shadow: var(--shadow); }
+
+.gc-card-header {
+  display: flex; justify-content: space-between;
+  align-items: flex-start; gap: 1rem; flex-wrap: wrap;
+}
+
+.gc-card-titulo-row {
+  display: flex; align-items: center; gap: 0.8rem;
+  flex-wrap: wrap; margin-bottom: 0.5rem;
+}
+
+.gc-card-titulo-row h3 { color: var(--text-primary); font-size: 1.05rem; font-weight: 600; }
+
+.estado-activo { background-color: var(--success-bg); color: var(--success-text); border: 1px solid var(--success-border); }
+.estado-pausado { background-color: var(--warning-bg); color: var(--warning-text); border: 1px solid var(--warning-border); }
+.estado-finalizado { background-color: var(--error-bg); color: var(--error-text); border: 1px solid var(--error-border); }
+
+.gc-materia-tag {
+  display: inline-block;
+  background-color: var(--tag-bg); color: var(--tag-text);
+  padding: 0.2rem 0.7rem; border-radius: 6px;
+  font-size: 0.78rem; font-weight: 600; margin-bottom: 0.5rem;
+}
+
+.gc-descripcion { color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 0.4rem; line-height: 1.5; }
+.gc-cupo { color: var(--text-muted); font-size: 0.82rem; }
+
+.gc-card-acciones { display: flex; flex-direction: column; gap: 0.5rem; align-items: flex-end; }
+
+.btn-expandir {
+  background: none; border: 1.5px solid var(--border-color);
+  color: var(--text-secondary); padding: 0.45rem 1rem;
+  border-radius: 8px; cursor: pointer;
+  font-family: "Inter", sans-serif; font-size: 0.82rem;
+  transition: all 0.2s; white-space: nowrap;
+}
+.btn-expandir:hover { border-color: var(--accent); color: var(--accent); }
+
+.btn-inscripciones {
+  background-color: var(--accent-light); border: none;
+  color: var(--accent); padding: 0.45rem 1rem;
+  border-radius: 8px; cursor: pointer;
+  font-family: "Inter", sans-serif; font-size: 0.82rem;
+  transition: all 0.2s; white-space: nowrap;
+}
+.btn-inscripciones:hover { background-color: var(--accent); color: white; }
+
+.gc-expandido {
+  margin-top: 1.2rem; padding-top: 1.2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.gc-horarios-section h4 { color: var(--text-primary); font-size: 0.9rem; margin-bottom: 0.8rem; font-weight: 600; }
+
+.gc-agregar-horario {
+  display: flex; gap: 0.5rem; align-items: center;
+  flex-wrap: wrap; margin-bottom: 1rem;
+  padding: 0.8rem; background: var(--bg-secondary);
+  border-radius: 8px; border: 1px solid var(--border-color);
+}
+
+.gc-agregar-horario select {
+  padding: 0.55rem 0.8rem;
+  border: 1.5px solid var(--border-color); border-radius: 8px;
+  font-family: "Inter", sans-serif; font-size: 0.88rem;
+  background: var(--bg-input); color: var(--text-primary); cursor: pointer;
+}
+.gc-agregar-horario select:focus { outline: none; border-color: var(--border-focus); }
+
+.gc-agregar-horario span { color: var(--text-muted); font-size: 0.88rem; }
+
+.gc-horarios-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+.horario-chip {
+  display: flex; align-items: center; gap: 0.5rem;
+  background-color: var(--tag-bg); color: var(--tag-text);
+  padding: 0.35rem 0.8rem; border-radius: 20px;
+  font-size: 0.82rem; font-weight: 500;
+  border: 1px solid var(--border-color);
+}
+
+.chip-inscritos { color: var(--text-muted); font-size: 0.78rem; }
+.chip-eliminar {
+  background: none; border: none; color: var(--text-muted);
+  cursor: pointer; font-size: 0.78rem; padding: 0; line-height: 1;
+}
+.chip-eliminar:hover { color: var(--error-text); }
+
+.gc-estado-acciones { display: flex; gap: 0.8rem; margin-top: 1rem; flex-wrap: wrap; }
+
+.btn-pausar, .btn-activar, .btn-finalizar, .btn-eliminar-curso {
+  padding: 0.45rem 1rem; border-radius: 8px;
+  cursor: pointer; font-family: "Inter", sans-serif;
+  font-size: 0.82rem; border: none; transition: all 0.2s; font-weight: 500;
+}
+
+.btn-pausar { background-color: var(--warning-bg); color: var(--warning-text); border: 1px solid var(--warning-border); }
+.btn-pausar:hover { background-color: var(--warning-text); color: white; }
+.btn-activar { background-color: var(--success-bg); color: var(--success-text); border: 1px solid var(--success-border); }
+.btn-activar:hover { background-color: var(--success-text); color: white; }
+.btn-finalizar { background-color: var(--error-bg); color: var(--error-text); border: 1px solid var(--error-border); }
+.btn-finalizar:hover { background-color: var(--error-text); color: white; }
+.btn-eliminar-curso { background-color: var(--bg-secondary); color: var(--text-muted); border: 1px solid var(--border-color); }
+.btn-eliminar-curso:hover { background-color: var(--error-text); color: white; border-color: var(--error-text); }
+
+.sin-horarios { color: var(--text-muted); font-size: 0.82rem; font-style: italic; }
+
+.gc-vacio {
+  background: var(--bg-card); border-radius: 12px; padding: 3rem;
+  text-align: center; color: var(--text-muted);
+  box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);
+}
+
+@media (max-width: 600px) {
+  .gc-container { padding: 1rem; }
+  .form-row-2 { grid-template-columns: 1fr; }
+  .gc-agregar-horario { flex-direction: column; align-items: stretch; }
+}
