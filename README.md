@@ -1,3 +1,15 @@
+#EJECUTAR EL PROGRAMA
+
+1. Abre Visual Studio Code
+2. Abre la terminal (Terminal → New Terminal)
+3. Entra a la carpeta del proyecto:
+  cd Desktop/studentconnect
+4. Inicia el servidor:
+  npm run dev
+5. Abre el navegador y ve a:
+control + click en http://localhost:5173
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
