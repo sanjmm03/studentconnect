@@ -1,13 +1,15 @@
 #EJECUTAR EL PROGRAMA
 
-1. Abre Visual Studio Code
+1. Abre Visual Studio Code (abre la carpeta del proyecto)
 2. Abre la terminal (Terminal → New Terminal)
 3. Entra a la carpeta del proyecto:
-  cd Desktop/studentconnect
-4. Inicia el servidor:
+  cd Desktop/studentconnect (o donde lo tengas ubicado)
+4. Instalar npm:
+   npm install
+5. Inicia el servidor:
   npm run dev
-5. Abre el navegador y ve a:
-control + click en http://localhost:5173
+6. Abre el navegador y ve a:
+http://localhost:5173
 
 
 # React + Vite
