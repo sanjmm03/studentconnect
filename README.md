@@ -5,9 +5,9 @@
 3. Entra a la carpeta del proyecto:
   cd Desktop/studentconnect (o donde lo tengas ubicado)
 4. Instalar npm:
-   npm install
+   npm install (en Terminal)
 5. Inicia el servidor:
-  npm run dev
+  npm run dev (en Terminal)
 6. Abre el navegador y ve a:
 http://localhost:5173
 
